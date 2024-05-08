@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">Money<span class="logo-sub">.co</span></h1>
+
+        <div class="hero-primary-info">
+            <div class="hero-first">
+                <h1>Quickly keep track of your</h1>
+            </div>
+            <div class="hero-second">
+                <h1>spending habits.</h1>
+            </div>
+        </div>
+
+        <div class="hero-secondary-info">
+            <h3>Try our service and see where your monthly expenses go</h3>
+        </div>
+
+        <div class="get-started">
+            <a href="/login" style="text-decoration: none;"><div type="button" class="btn">Login</div></a>
+            <a href="signup/" style="text-decoration: none;"><div type="button" class="btn">Sign-up</div></a>
+        </div>
+
+        <div>
+            <img class="home-img" src="{% static 'images/undraw_mobile_payments_re_7udl.svg'%}" alt="home" />
+        </div>
+        <div>
+            <h1>My Quote</h1>
+            {% if token %}
+            <p>{{ token }}</p>
+            {% else %}
+            <p>No token generated.</p>
+            {% endif %}
+        </div>
+    </div>
+  </div>
+</body>
+</html>
